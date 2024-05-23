@@ -4,7 +4,8 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "sensors": "github:gigotoys/gigo-block#b900a6ceabfc9757eb5b5c308f2d2a440dc58785"
     },
     "files": [
         "main.blocks",
@@ -22,5 +23,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "pyprj"
+    "preferredEditor": "blocksprj"
 }
