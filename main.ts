@@ -1,4 +1,4 @@
-function right () {
+function right() {
     basic.showLeds(`
         . . . . .
         . . . # .
@@ -6,20 +6,11 @@ function right () {
         . . . # .
         . . . . .
         `)
-    sensors.DDMmotor(
-    AnalogPin.P13,
-    0,
-    AnalogPin.P14,
-    220
-    )
-    sensors.DDMmotor(
-    AnalogPin.P15,
-    1,
-    AnalogPin.P16,
-    200
-    )
+    sensors.DDMmotor(AnalogPin.P13, 0, AnalogPin.P14, 220)
+    sensors.DDMmotor(AnalogPin.P15, 1, AnalogPin.P16, 200)
 }
-function Forward () {
+
+function Forward() {
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -27,24 +18,16 @@ function Forward () {
         . . # . .
         . . # . .
         `)
-    sensors.DDMmotor(
-    AnalogPin.P13,
-    0,
-    AnalogPin.P14,
-    255
-    )
-    sensors.DDMmotor(
-    AnalogPin.P15,
-    0,
-    AnalogPin.P16,
-    255
-    )
+    sensors.DDMmotor(AnalogPin.P13, 0, AnalogPin.P14, 255)
+    sensors.DDMmotor(AnalogPin.P15, 0, AnalogPin.P16, 255)
 }
-function UnCatch () {
+
+function UnCatch() {
     pins.digitalWritePin(DigitalPin.P12, 0)
     pins.servoWritePin(AnalogPin.P12, 180)
 }
-function left () {
+
+function left() {
     basic.showLeds(`
         . . . . .
         . # . . .
@@ -52,20 +35,11 @@ function left () {
         . # . . .
         . . . . .
         `)
-    sensors.DDMmotor(
-    AnalogPin.P13,
-    1,
-    AnalogPin.P14,
-    220
-    )
-    sensors.DDMmotor(
-    AnalogPin.P15,
-    0,
-    AnalogPin.P16,
-    220
-    )
+    sensors.DDMmotor(AnalogPin.P13, 1, AnalogPin.P14, 220)
+    sensors.DDMmotor(AnalogPin.P15, 0, AnalogPin.P16, 220)
 }
-function stop () {
+
+function stop() {
     basic.showLeds(`
         . . . . .
         . # # # .
@@ -73,28 +47,21 @@ function stop () {
         . # # # .
         . . . . .
         `)
-    sensors.DDMmotor(
-    AnalogPin.P13,
-    1,
-    AnalogPin.P14,
-    0
-    )
-    sensors.DDMmotor(
-    AnalogPin.P15,
-    0,
-    AnalogPin.P16,
-    0
-    )
+    sensors.DDMmotor(AnalogPin.P13, 1, AnalogPin.P14, 0)
+    sensors.DDMmotor(AnalogPin.P15, 0, AnalogPin.P16, 0)
 }
-function Stop2 () {
+
+function Stop2() {
     pins.digitalWritePin(DigitalPin.P12, 0)
     pins.servoWritePin(AnalogPin.P12, 90)
 }
-function Catch () {
+
+function Catch() {
     pins.digitalWritePin(DigitalPin.P12, 0)
     pins.servoWritePin(AnalogPin.P12, 0)
 }
-function Backward () {
+
+function Backward() {
     basic.showLeds(`
         . . # . .
         . . # . .
@@ -103,3 +70,4 @@ function Backward () {
         . . # . .
         `)
 }
+

@@ -1,3 +1,4 @@
+
 def right():
     basic.show_leds("""
         . . . . .
@@ -67,7 +68,7 @@ def diver():
             right()
     elif (pins.digital_read_pin(DigitalPin.P1) == 1 and pins.digital_read_pin(DigitalPin.P8) == 1):
         pass
-    else : 
+    else :
     basic.show_leds("""
     . # . . .
     . . # . .
@@ -112,3 +113,12 @@ def event(num):
         NLeft()
     else basic.show_string("No event left")
     
+
+def on_button_pressed_a():
+    while (pins.digital_read_pin(DigitalPin.P1) == 0 and pins.digital_read_pin(DigitalPin.P1) == 0):
+        forward()
+    stop()
+input.on_button_pressed(Button.A, on_button_pressed_a)
+def on_button_pressed_b():
+    NLeft()
+input.on_button_pressed(Button.B, on_button_pressed_b)
